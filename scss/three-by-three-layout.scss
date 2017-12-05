@@ -1,0 +1,220 @@
+.layout-1, .layout-2 {
+
+	#logo {
+		width: 50vw;
+		height: 10vw;
+		top: 3vh;
+		left: 0;
+		right: 0;
+	}
+
+	#logo-final {
+		width: 60vw;
+		height: 10vw;
+		top: 32vh;
+		left: 0;
+		right: 0;
+		z-index: 100;
+	}
+
+	#reel-layout {
+		width: 95vw;
+	    height: 95vw;
+	    top: 16.5vh;
+	    left: 0;
+	    right: 0;
+	    z-index: -1;
+	}
+
+	#win-counter, #win-counter-final{
+		width: 70vw;
+	    height: 15vw;
+	    left: 0;
+	    right: 0;
+	    top: 77vh;
+	}
+
+	#win-counter-background, #win-counter-background-final {
+		width: 80vw;
+	    height: 10vw;
+	    left: 0;
+	    right: 0;
+	    top: 78vh;
+	}
+
+	#coin-effect-area {
+	    width: 100%;
+	    height: 55vh;
+	    top: 15vh;
+	}
+
+	#coin-cascade-area {
+		width: 100%;
+	    height: 10vh;
+	    top:0;
+	    left:0;
+	    right: 0;
+	}
+
+	#coin-stack-area {
+	    width: 90%;
+	    height: 15vh;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	}
+
+	#win-message-container {
+	    left: 0;
+	    right: 0;
+	    top: 35vw;
+	    width: 95%;
+	    height: 50%;
+	}
+
+	#spin-button {
+		top: 30%;
+	    left: 0;
+	    right: 0;
+	    width: 40%;
+	    height: 10vw;
+	    z-index: 2000;
+	}
+
+	#spin-overlay {
+	    width: 95vw;
+	    height: 47.5vw;
+	    left: 0;
+	    right: 0;
+	    top: calc(23.5vh + 47.5vw);
+	    pointer-events: none;
+	}
+
+	#bottom-container{
+		width: 100%;
+	    height: 25%;
+	    bottom: 0;
+	}
+
+	#bottom-container #client-footer {
+		bottom: 8%;
+    	height: 50%;
+    	width: 70%;
+	    left: 0;
+	    right: 0;
+	}
+
+	#cta-container, #cta-container-final {
+		width: 70%;
+		height: 10%;
+		left: 0;
+		right: 0;
+		bottom: 2%;
+	}
+
+	#cta-container-final {
+		bottom: 23%;
+	}
+
+}
+
+.layout-2 {
+	#spin-button {
+		top: 120%;
+	}
+}
+
+@media all and (orientation: landscape) {
+	.layout-1, .layout-2 {
+		#logo {
+			width: 35vw;
+			left: auto;
+			right: 5vw;
+		}
+		#logo-final {
+			width: 50vw;
+			top: 5vh;
+			left: auto;
+			right: 2.5vw;
+		}
+		#reel-layout{
+			width: 50vw;
+			height: 50vw;
+			left: 2vw;
+			right: auto;
+			top: 43vh;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+		}
+		#win-counter, #win-counter-final{
+			width: 35vw;
+			height: 10vw;
+			left: auto;
+			right: 5vw;
+			top: 55vh;
+		}
+		#win-counter-background, #win-counter-background-final {
+			width: 45vw;
+			left: auto;
+			right: 0;
+			top: 45vh;
+		}
+
+		#coin-effect-area {
+			width: 55vw;
+			height: 55vw;
+			top: 3vh;
+		}
+
+		#coin-cascade-area {
+			width: 80vw;
+			left: 0;
+			right: 0;
+		}
+
+		#coin-stack-area {
+			width: 50vw;
+			left: 0;
+			right: 0;
+		}
+
+		#spin-overlay {
+			width: 50vw;
+			left: 0;
+			right: auto;
+		}
+
+		#spin-button {
+			width: 50%;
+		}
+
+		#win-message-container {
+			width: 50vw;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			left: 2vw;
+			right: auto;
+		}
+
+		#bottom-container {
+			width: 45%;
+			left: auto;
+			right: 0;
+		}
+
+		#bottom-container #client-footer {
+			height: 100%;
+		}
+	}
+	.layout-2{
+		#spin-overlay {
+			left: auto;
+			right: 0;
+			top: 40%;
+		}
+		#spin-button {
+			top: 0%;
+		}
+	}
+}

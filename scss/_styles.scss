@@ -1,0 +1,377 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-width: 100% auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(../assets/bg.jpg);
+}
+
+canvas {
+    display: block;
+    cursor: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#bottom-container {
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+}
+
+#bottom-container #client-footer {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    z-index: 900;
+}
+
+#bottom-container #client-footer img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+#bottom-container.full {
+    opacity: 0;
+}
+.preload-font {
+ position: absolute;
+ bottom: -1000%; 
+}
+
+/*
+ * IEC elements (not being used in the canvas) ------------------------------------------------------------
+ */
+
+.item {
+    position: absolute;
+    margin: auto;
+}
+
+.item img {
+    width: 100%;
+}
+
+#frame {
+    z-index: 100;
+    width: 100vw;
+    top: 10vw;
+}
+
+/*
+ * PIEC elements sizing and positioning -------------------------------------------------------------------
+ */
+
+.layout-item {
+    position: absolute;
+    margin: auto;
+    z-index: 20;
+    pointer-events: none;
+}
+
+#game {
+    position: absolute;
+    margin: auto;
+    left:0;
+    top:0;
+    z-index: 10;
+}
+
+#spin-button img{
+    width: 100%;
+}
+
+
+/* Debug mode settings for PIEC containers ---------------------------------------------------*/
+.debug {
+    #logo {
+        background: lightcoral;
+        opacity: .3;
+        border: 1px solid white;
+    }
+
+    #logo-final {
+        background: lightcoral;
+        opacity: .5;
+        border: 1px solid white;
+    }
+
+    #cinderella-container {
+        background: rgba(0,200,0,.25);
+        border: 1px solid white;
+    }
+
+    #reel-layout {
+        background-color: rgba(254,66,66,.25);
+        border: 1px solid white;
+    }
+
+    #win-counter, #win-counter-final {
+        background-color: lightyellow;
+        opacity: 0.4;
+        border: 1px solid white;
+    }
+
+    #coin-effect-area{
+        background-color: lawngreen;
+        opacity: 0.4;
+        border: 1px solid white;
+    }
+
+    #coin-cascade-area {
+        background-color: fuchsia;
+        opacity: 0.4;
+        border: 1px solid white;
+    }
+
+    #coin-stack-area {
+        background-color: gold;
+        opacity: 0.4;
+        border: 1px solid white;
+    }
+
+    #win-counter-background, #win-counter-background-final{
+        background-color: cyan;
+        opacity: 0.4;
+        border: 1px solid white;
+    }
+
+    #win-message-container {
+        background-color: blue;
+        opacity: 0.4;
+        border: 1px solid white;
+    }
+
+    #spin-overlay {
+        background: black;
+        opacity: 0.4;
+        border: 1px solid white;
+    }
+
+    #spin-button {
+        background: white;
+        opacity: 0.5;
+        border: 1px solid white;
+    }
+
+    #cta-container, #cta-container-final {
+        background: pink;
+        opacity: 0.5;
+        border: 1px solid white;
+    }
+}
+
+/* Overwrite and adjust some of the css settings from the layouts here -----------------------*/
+.layout-1, .layout-2 {
+    #reel-layout{
+        width: 54.5vh;
+        max-width: 100vw;
+        max-height: 78vw;
+        height: 40vh;
+    }
+    #win-counter, #win-counter-final{
+        width: 63vw;
+        height: 12.5vw;
+        left: 16vw;
+        right: 0;
+    }
+    #win-counter{
+        top: 79.5vh;
+    }
+    #win-counter-final{
+        top: 53vh;
+    }
+    #win-counter-background{
+        top: 79vh;
+    }
+    #win-counter-background-final{
+        top: 52.5vh;
+    }
+    #spin-overlay {
+        height: 35.5vw;
+        top: calc(23.5vh + 35.5vw);
+    }
+}
+
+@media all and (orientation:landscape) {
+    .layout-1, .layout-2 {
+        #logo-final {
+            left: 0;
+            right: 0;
+        }
+        #reel-layout {
+            width: 52vw;
+            height: 38vw;
+        }
+        #win-counter, #win-counter-final {
+            width: 35vw;
+            top: 64.5%;
+            left: auto;
+            right: 1vw;
+            height: 7.5vw;
+        }
+        #win-counter-background {
+            top: 64%;
+        }
+        #win-counter-final {
+            top: 53%;
+            left: 10%;
+            right: 0;
+        }
+        #win-counter-background-final {
+            top: 53%;
+            left: 0;
+            right: 0;
+        }
+        #cta-container {
+            width: 43%;
+            height: 20%;
+            left: auto;
+            right: 1vw;
+            bottom: 2%;
+        }
+        #cta-container-final {
+            width: 50%;
+            height: 20%;
+            left: 0;
+            right: 0;
+            bottom: 10%;
+        }
+        #spin-overlay {
+            width: 45%;
+            top: 37%;
+        }
+        #spin-button {
+            width: 60%;
+        }
+        #tooltip {
+            top: 0;
+            bottom: 0;
+        }
+    }
+}
+
+/*
+ * --------------------------------------------------------------------------------------------------------
+ */
+
+ #cleopatra-container {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    // top: 1%;
+}
+
+#tooltip {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    height: 40%;
+}
+
+ #cta-background{
+    background: #091e3d;
+    background: -ms-linear-gradient(#050d1e, #050d1e 3%, #45485b 5%, #050d1e 8%, #091e3d 20%);
+    background: -moz-linear-gradient(#050d1e, #050d1e 3%, #45485b 5%, #050d1e 8%, #091e3d 20%);
+    background: -webkit-linear-gradient(#050d1e, #050d1e 3%, #45485b 5%, #050d1e 8%, #091e3d 20%);
+    background: linear-gradient(#050d1e, #050d1e 3%, #45485b 5%, #050d1e 8%, #091e3d 20%);
+    width: 100%;
+    height: 23%;
+    bottom: 0;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#reel-layout-background {
+    width: 56vh;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+    top: 5vh;
+}
+
+@media all and (orientation:landscape) {
+    #reel-layout-background {
+        width: 53.5vw;
+        left: 1.5vw;
+        right: auto;
+        top: 50.5%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    #cta-background {
+        width: 100%;
+        height: 40%;
+        left: auto;
+        right: 0;
+    }
+}
+
+@media all and (min-width: 768px) and (orientation: portrait) {
+    .layout-2 {
+        #logo {
+            width: 40vw;
+        }
+        #logo-final {
+            width: 50vw;
+            top: 28vh;
+        }
+        #spin-overlay {
+            width: 73vw;
+            height: 19.5vw;
+        }
+        #reel-layout {
+            width: 70vw;
+            height: 52vw;
+        }
+        #reel-layout-background {
+            width: 73vw;
+        }
+        #cta-container {
+            width: 50%;
+        }
+        #cta-container-final {
+            width: 60%;
+            bottom: 20%;
+        }
+        #win-counter-background {
+            width: 60vw;
+        }
+        #win-counter {
+            width: 45vw;
+            height: 9vw;
+            left: 13vw;
+        }
+        #coin-effect-area {
+            width: 85%;
+        }
+        #coin-cascade-area {
+            width: 90%;
+        }
+        #coin-stack-area {
+            width: 70%;
+        }
+    }
+}
