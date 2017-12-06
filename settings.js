@@ -24,7 +24,7 @@ PiecSettings.reelLayout = [3,3,3]; // Heights of each of the reels in array form
 PiecSettings.reels = [ // Tease on first spin, win on second, big win on third
     ["wild","wild","wild","wild","oneb","oneb","trib","gold","gold","doubleb","oneb","brown","brown","gold","gold","gold","brick","brick","brick","brick","brick","brick","brick","gold","doubleb","doubleb","brown","brown","brown","brown","brown","brown","trib","oneb","brown","brown","brown"],
     ["brick","brick","brick","gold","oneb","bell","bell","bell","gold","brick","brick","brick","brick","oneb","gold","gold","trib","doubleb","doubleb","bell","bell","bell","bell","bell","bell","doubleb","doubleb","doubleb","trib","doubleb","doubleb","gold","bell","bell","bell","doubleb","oneb","trib"],
-    ["bell","bell","bell","bell","brown","doubleb","trib","oneb","doubleb","brown","brown","brown","brown","gold","gold","gold","trib","brick","brick","brick","brick","brick","doubleb","doubleb","bell","bell","bell","gold","brown","brown","brown","trib","bell","bell","bell","bell","bell","bell","gold","doubleb","bell"],
+    ["bell","bell","bell","brown","brown","doubleb","trib","oneb","doubleb","brown","brown","brown","brown","gold","gold","gold","trib","brick","brick","brick","brick","brick","doubleb","doubleb","bell","bell","bell","gold","brown","brown","brown","trib","bell","bell","bell","bell","bell","bell","gold","doubleb","bell"],
 ];
 PiecSettings.reelsAnimation = {
     delayPerReel: [0,300,600],

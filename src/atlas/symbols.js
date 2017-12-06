@@ -75,10 +75,10 @@ export default {"frames": {
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "icons",
+	"image": "symbols",
 	"format": "RGBA8888",
 	"size": {"w":152,"h":1188},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:3438fb145ae554bc2ed921786f2ac92c:2fd24cfc6a2eac5a6cbcdf69dc85bc17:97d2cbc03c0d4a67aa6daf3e8c1005a7$"
+	"smartupdate": "$TexturePacker:SmartUpdate:2962485a46bae2731ed59535b48e2c33:2fd24cfc6a2eac5a6cbcdf69dc85bc17:d295ed7153fe372207e34d26d380974a$"
 }
 }

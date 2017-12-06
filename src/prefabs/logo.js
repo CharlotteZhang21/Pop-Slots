@@ -25,8 +25,8 @@ class Logo extends Phaser.Group {
 
 		var newScale = finalContainerWidth/this.initialLogoWidth;
 
-		var positionTween = this.game.add.tween(this.logo).to({x: finalContainerX, y: finalContainerY}, 1400, Phaser.Easing.Quadratic.InOut, true, 0);
-		var scaleTween = this.game.add.tween(this.logo.scale).to({x: newScale, y: newScale}, 1400, Phaser.Easing.Quadratic.InOut, true, 0);
+		var positionTween = this.game.add.tween(this.logo).to({x: finalContainerX, y: finalContainerY}, 1000, Phaser.Easing.Quadratic.InOut, true, 0);
+		var scaleTween = this.game.add.tween(this.logo.scale).to({x: newScale, y: newScale}, 1000, Phaser.Easing.Quadratic.InOut, true, 0);
 	}
 }
 

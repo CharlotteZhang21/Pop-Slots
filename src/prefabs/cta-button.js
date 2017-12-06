@@ -4,7 +4,7 @@ class CtaButton extends Phaser.Group {
 
 		this.button = new Phaser.Sprite(game, 0, 0, 'cta', 0);
 		this.add(this.button);
-
+		this.button.anchor.set(0.5);
 		this.fitInContainer();
 
 		this.initialCtaWidth = this.button.width;
@@ -22,24 +22,40 @@ class CtaButton extends Phaser.Group {
 		var containerX = this.container.getBoundingClientRect().left * window.devicePixelRatio;
 		var containerY = this.container.getBoundingClientRect().top * window.devicePixelRatio;
 
-		this.x = containerX;
-		this.y = containerY;
+
+		if(document.body.scrollWidth < document.body.scrollHeight){
+			//portrait
+			this.x = containerX*1.75;
+			this.y = containerY;
+		}else{
+			this.x = containerX*1.4;
+			this.y = containerY;
+
+		}
 
 		this.scale.x = this.containerWidth/this.button.width;
 		this.scale.y = this.scale.x;
+
 	}
 
 	animate() {
 		var finalContainer = document.getElementById("cta-container-final");
 		var finalContainerWidth = finalContainer.offsetWidth * window.devicePixelRatio;
-		var finalContainerX = finalContainer.getBoundingClientRect().left * window.devicePixelRatio;
+		var finalContainerX = finalContainer.getBoundingClientRect().left * window.devicePixelRatio *1.8;
 		var finalContainerY = finalContainer.getBoundingClientRect().top * window.devicePixelRatio;
 
 		var newScale = finalContainerWidth/this.initialCtaWidth;
 
-		var positionTween = this.game.add.tween(this).to({x: finalContainerX, y: finalContainerY}, 1400, Phaser.Easing.Back.InOut, true, 0);
-		var scaleTween = this.game.add.tween(this.scale).to({x: newScale, y: newScale}, 1400, Phaser.Easing.Back.InOut, true, 0);
+		// if(document.body.scrollWidth < document.body.scrollHeight ){
+			//portrait
+			var positionTween = this.game.add.tween(this).to({x: finalContainerX, y: finalContainerY}, 1400, Phaser.Easing.Back.InOut, true, 0);
+			var scaleTween = this.game.add.tween(this.scale).to({x: newScale, y: newScale}, 1000, Phaser.Easing.InOut, true, 0, -1, true);
 
+		// }else {
+		// 	var scaleTween = this.game.add.tween(this.scale).to({x: newScale, y: newScale}, 1000, Phaser.Easing.InOut, true, 0, -1, true);
+		// }
+
+		
 	}
 }
 

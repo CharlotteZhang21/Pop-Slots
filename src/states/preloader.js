@@ -79,7 +79,7 @@
                 }
             }
         }
-        PiecSettings.reelWidth = maxWidth;
+        PiecSettings.reelWidth = maxWidth*1.5;
          // this.game.load.spritesheet('some-sprite-sheet', PiecSettings.assetsDir + 'some-sprite-sheet.png', 138, 138);
          
      }

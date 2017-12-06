@@ -1,17 +1,23 @@
 .layout-1, .layout-2 {
 
 	#logo {
-		width: 50vw;
-		height: 10vw;
+		width: 15vw;
+		height: 15vw;
 		top: 3vh;
-		left: 0;
-		right: 0;
+		left: 3vh;
+		// right: 0;
 	}
 
+	#logo img{
+		max-width: 100%;
+		z-index: 100;
+	}
+
+
 	#logo-final {
-		width: 60vw;
+		width: 30vw;
 		height: 10vw;
-		top: 32vh;
+		top: 45vh;
 		left: 0;
 		right: 0;
 		z-index: 100;
@@ -20,26 +26,34 @@
 	#reel-layout {
 		width: 95vw;
 	    height: 95vw;
-	    top: 16.5vh;
+	    top: 43vh;
 	    left: 0;
 	    right: 0;
 	    z-index: -1;
 	}
 
 	#win-counter, #win-counter-final{
-		width: 70vw;
-	    height: 15vw;
-	    left: 0;
-	    right: 0;
-	    top: 77vh;
+		// width: 70vw;
+	 //    height: 15vw;
+	 //    left: 0;
+	 //    right: 0;
+	 //    top: 77vh;
+
+	 	width: 100vw;
+		height: 20vw;
+		top: 10vh;
+		left: 0;
+		right: 0;
+		z-index: -1;
 	}
 
 	#win-counter-background, #win-counter-background-final {
-		width: 80vw;
-	    height: 10vw;
+		width: 100vw;
+	    height: 20vw;
 	    left: 0;
 	    right: 0;
 	    top: 78vh;
+	    z-index: -1;
 	}
 
 	#coin-effect-area {
@@ -72,15 +86,6 @@
 	    height: 50%;
 	}
 
-	#spin-button {
-		top: 30%;
-	    left: 0;
-	    right: 0;
-	    width: 40%;
-	    height: 10vw;
-	    z-index: 2000;
-	}
-
 	#spin-overlay {
 	    width: 95vw;
 	    height: 47.5vw;
@@ -105,44 +110,52 @@
 	}
 
 	#cta-container, #cta-container-final {
-		width: 70%;
-		height: 10%;
-		left: 0;
+		width: 47%;
+		height: 8%;
+		left: 4vw;
 		right: 0;
-		bottom: 2%;
+		bottom: 3%;
 	}
 
 	#cta-container-final {
-		bottom: 23%;
+		bottom: 13%;
+		left: 0;
+		z-index: 999;
 	}
 
 }
 
 .layout-2 {
 	#spin-button {
-		top: 120%;
+		top: 19vh;
+		right: 0;
+		left: -10vw;
+	    width: 100vw;
+	    height: 20vw;
+	    z-index: 1;
 	}
 }
 
 @media all and (orientation: landscape) {
 	.layout-1, .layout-2 {
 		#logo {
-			width: 35vw;
-			left: auto;
-			right: 5vw;
+			width: 18vw;
+			height: 18vw;
+			right: -55vw;
+			top: 30vh;
 		}
 		#logo-final {
-			width: 50vw;
+			width: 20vw;
 			top: 5vh;
 			left: auto;
 			right: 2.5vw;
 		}
 		#reel-layout{
-			width: 50vw;
-			height: 50vw;
-			left: 2vw;
+			width: 42vw;
+			height: 28vw;
+			left: 8vw;
 			right: auto;
-			top: 43vh;
+			top: 61vh;
 			transform: translateY(-50%);
 			-webkit-transform: translateY(-50%);
 		}
@@ -151,13 +164,13 @@
 			height: 10vw;
 			left: auto;
 			right: 5vw;
-			top: 55vh;
+			top: 20vh;
 		}
 		#win-counter-background, #win-counter-background-final {
-			width: 45vw;
-			left: auto;
-			right: 0;
-			top: 45vh;
+			width: 60vw;
+			left: -42vw;
+			// right: 0;
+			// top: 45vh;
 		}
 
 		#coin-effect-area {

@@ -39,16 +39,17 @@ import * as WinMessages from '../utils/win-messages-util.js';
         this.spinOverlay = new SpinOverlay(this.game);
         this.game.add.existing(this.spinOverlay);
 
+        this.winCounter = new WinCounter(this.game);
+        this.game.add.existing(this.winCounter);
+
         this.tooltip = new Tooltip(this.game, this.darkOverlay, this.spinOverlay.spinButton);
         this.game.add.existing(this.tooltip);
 
         this.fxEffectsLayer = this.game.add.group();
 
-        this.winCounter = new WinCounter(this.game);
-        this.game.add.existing(this.winCounter);
-
         this.logo = new Logo(this.game);
         this.game.add.existing(this.logo);
+
 
         this.cta = new CtaButton(this.game);
         this.game.add.existing(this.cta);
@@ -171,7 +172,7 @@ import * as WinMessages from '../utils/win-messages-util.js';
             this.game.time.events.add(finalCtaDelay, function() {
                 this.darkOverlay.show();
                 this.logo.animate();
-                this.winCounter.animate();
+                // this.winCounter.animate();
                 this.cta.animate();
             }, this);
         }

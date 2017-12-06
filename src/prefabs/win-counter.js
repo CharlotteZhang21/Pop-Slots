@@ -5,7 +5,7 @@ class WinCounter extends Phaser.Group {
 	constructor(game) {
 		super(game);
 
-		this.fitInContainer();
+		this.fitInContainer();  
 		this.createWinCounterBackground();
 		this.createWinCounter();
 
@@ -63,6 +63,9 @@ class WinCounter extends Phaser.Group {
 		this.initialWinCounterBackgroundWidth = this.winCounterBackground.width;
 		this.winCounterBackground.scale.x = containerWidth / this.winCounterBackground.width;
 		this.winCounterBackground.scale.y = this.winCounterBackground.scale.x;
+
+		console.log("wincounter scale" + containerWidth);
+		console.log("button" + this.winCounterBackground.width);
 		this.game.world.moveDown(this.winCounterBackground);
 	}
 
@@ -107,7 +110,7 @@ class WinCounter extends Phaser.Group {
 
 	animate() {
 		this.animateWinCounterText();
-		this.animateWinCounterBackground();
+		// this.animateWinCounterBackground();
 	}
 
 	animateWinCounterText() {
@@ -135,6 +138,7 @@ class WinCounter extends Phaser.Group {
 
 		var positionTween = this.game.add.tween(this.winCounterBackground).to({x: finalContainerX, y: finalContainerY}, 1000, Phaser.Easing.Back.InOut, true, 0);
 		var scaleTween = this.game.add.tween(this.winCounterBackground.scale).to({x: newScale, y: newScale}, 1000, Phaser.Easing.Back.InOut, true, 0);
+		var positionTween = this.game.add.tween(this.winCounterBackground).to({x: finalContainerX, y: finalContainerY}, 1000, Phaser.Easing.Back.InOut, true, 0)
 	}
 
 }

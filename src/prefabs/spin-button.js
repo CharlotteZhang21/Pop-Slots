@@ -16,7 +16,7 @@ class SpinButton extends Phaser.Group {
 
 		this.button.inputEnabled = true;
 		this.button.input.useHandCursor = true;
-		this.button.anchor.set(0.5);
+		this.button.anchor.set(0.45, 0.25);
 		this.button.events.onInputDown.add(function() {
 			this.game.onSpin.dispatch();
 			this.game.global.userInteractedWithIEC = true;
@@ -34,12 +34,14 @@ class SpinButton extends Phaser.Group {
 		this.y = containerY + this.containerHeight/2;
 
 		this.scale.x = this.containerWidth/this.button.width;
+		console.log("scale/" + this.containerWidth);
+		console.log("button" + this.button.width);
 		this.scale.y = this.scale.x;
 	}
 
 	createLabel(){
 
-		this.fontSize = this.button.height * .47;
+		this.fontSize = this.button.height * .4;
 
 		var style = {
 			font: "bold " + this.fontSize + "px " + PiecSettings.fontFamily,
@@ -47,7 +49,7 @@ class SpinButton extends Phaser.Group {
 
 		this.spinsLeft = PiecSettings.spins.length;
 
-		this.textField = new Phaser.Text(this.game, (this.button.width/2)/4 * 2.2, 0, this.spinsLeft, style);
+		this.textField = new Phaser.Text(this.game, (this.button.width/2)/14, 0, this.spinsLeft, style);
 		this.textField.anchor.set(0.5);
 		this.add(this.textField);
 		this.textField.align = 'center';
@@ -63,9 +65,9 @@ class SpinButton extends Phaser.Group {
 	}
 
 	startIdleAnimation() {
-		this.idleTween = this.game.add.tween(this.scale).to({x:.98,y:.98}, 1000, Phaser.Easing.Quadratic.InOut, true, 0, -1, true);
-		this.scale.x = 1;
-		this.scale.y = 1;
+		// this.idleTween = this.game.add.tween(this.scale).to({x:.99,y:.99}, 1000, Phaser.Easing.Quadratic.InOut, true, 0, -1, true);
+		// this.scale.x = 1;
+		// this.scale.y = 1;
 	}
 
 	stopIdleAnimation() {

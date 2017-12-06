@@ -15,6 +15,8 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-image: url(../assets/bg.jpg);
+    background-blend-mode: overlay;
+    background-color: #333;
 }
 
 canvas {
@@ -169,7 +171,7 @@ a {
     #spin-button {
         background: white;
         opacity: 0.5;
-        border: 1px solid white;
+        border: 1px solidbu white;
     }
 
     #cta-container, #cta-container-final {
@@ -183,24 +185,30 @@ a {
 .layout-1, .layout-2 {
     #reel-layout{
         width: 54.5vh;
-        max-width: 100vw;
-        max-height: 78vw;
-        height: 40vh;
+        max-width: 74vw;
+        max-height: 54vw;
+        height: 24vh;
     }
     #win-counter, #win-counter-final{
-        width: 63vw;
-        height: 12.5vw;
-        left: 16vw;
-        right: 0;
+        width: 65vw;
+        height: 9.5vw;
+        left: 0vw;
+        // right: 0;
+    }
+
+    #win-counter-background img{
+        width: 100%;
     }
     #win-counter{
-        top: 79.5vh;
+        top: 36vh;
+        z-index: 100;
     }
     #win-counter-final{
         top: 53vh;
     }
     #win-counter-background{
-        top: 79vh;
+        top: 10vh;
+        z-index: -10;
     }
     #win-counter-background-final{
         top: 52.5vh;
@@ -208,6 +216,10 @@ a {
     #spin-overlay {
         height: 35.5vw;
         top: calc(23.5vh + 35.5vw);
+    }
+
+    #cta-container-final {
+        width: 45%;
     }
 }
 
@@ -218,18 +230,18 @@ a {
             right: 0;
         }
         #reel-layout {
-            width: 52vw;
-            height: 38vw;
+            width: 45vw;
+            height: 28vw;
         }
         #win-counter, #win-counter-final {
             width: 35vw;
-            top: 64.5%;
-            left: auto;
-            right: 1vw;
+            top: 23%;
+            left: 10vw;
+            right: auto;
             height: 7.5vw;
         }
         #win-counter-background {
-            top: 64%;
+            top: -25vh;
         }
         #win-counter-final {
             top: 53%;
@@ -242,16 +254,16 @@ a {
             right: 0;
         }
         #cta-container {
-            width: 43%;
+            width: 35%;
             height: 20%;
             left: auto;
-            right: 1vw;
+            right: 8vw;
             bottom: 2%;
         }
         #cta-container-final {
-            width: 50%;
+            width: 40%;
             height: 20%;
-            left: 0;
+            left: -3vw;
             right: 0;
             bottom: 10%;
         }
@@ -260,7 +272,9 @@ a {
             top: 37%;
         }
         #spin-button {
-            width: 60%;
+            width: 64vw;
+            left: -102vw;
+            top: 30vh;
         }
         #tooltip {
             top: 0;
@@ -278,8 +292,8 @@ a {
     margin: auto;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 100%;
+    width: 78%;
+    height: 76%;
     // top: 1%;
 }
 
@@ -299,25 +313,25 @@ a {
     background: -webkit-linear-gradient(#050d1e, #050d1e 3%, #45485b 5%, #050d1e 8%, #091e3d 20%);
     background: linear-gradient(#050d1e, #050d1e 3%, #45485b 5%, #050d1e 8%, #091e3d 20%);
     width: 100%;
-    height: 23%;
+    height: 32%;
     bottom: 0;
     border-radius: 5px 5px 0px 0px;
 }
 
 #reel-layout-background {
-    width: 56vh;
+    width: 70vh;
     max-width: 100vw;
     left: 0;
     right: 0;
-    top: 5vh;
+    top: 35vh;
 }
 
 @media all and (orientation:landscape) {
     #reel-layout-background {
-        width: 53.5vw;
-        left: 1.5vw;
+        width: 60vw;
+        left: 0vw;
         right: auto;
-        top: 50.5%;
+        top: 54vh;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
     }
@@ -331,9 +345,9 @@ a {
 
 @media all and (min-width: 768px) and (orientation: portrait) {
     .layout-2 {
-        #logo {
-            width: 40vw;
-        }
+        // #logo {
+        //     width: 20vw;
+        // }
         #logo-final {
             width: 50vw;
             top: 28vh;
@@ -344,20 +358,20 @@ a {
         }
         #reel-layout {
             width: 70vw;
-            height: 52vw;
+            height: 45vw;
         }
         #reel-layout-background {
-            width: 73vw;
+            width: 85vw;
         }
         #cta-container {
-            width: 50%;
+            width: 43%;
         }
         #cta-container-final {
             width: 60%;
             bottom: 20%;
         }
         #win-counter-background {
-            width: 60vw;
+            width: 75vw;
         }
         #win-counter {
             width: 45vw;
@@ -373,5 +387,42 @@ a {
         #coin-stack-area {
             width: 70%;
         }
+
+        #tooltip {
+            bottom:29%;
+        }
+
+        #spin-button {
+            left: -16vw;
+            top: 15.5vh;
+            width: 96vw;
+        }
+    }
+}
+
+@media all and (min-width: 768px) and (orientation: landscape) {
+   .layout-2{ 
+        #logo{
+            width: 20vw;
+        }
+        
+        #win-counter {
+            top: 40vh;
+        }
+        #win-counter-background {
+            top: 5vh;
+        }
+
+        #reel-layout {
+            top: 72vh;
+        }
+        #reel-layout-background {
+            top: 62vh;
+        }
+
+        #spin-button {
+            top: 36vh;
+        }
+
     }
 }

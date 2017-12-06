@@ -44,14 +44,14 @@ class SpinOverlay extends Phaser.Group {
 	hide() {
 		this.spinButton.button.inputEnabled = false;
 		if (this.dissapearing || PiecSettings.spins.length == this.game.global.spin){
-			var tween = this.game.add.tween(this).to({alpha: 0}, 300, Phaser.Easing.Quadratic.In, true, 0);
+			var tween = this.game.add.tween(this).to({y: 0}, 300, Phaser.Easing.Quadratic.In, true, 0);
 		}
 	}
 
 	show() {
 		this.spinButton.button.inputEnabled = true;
 		if (this.dissapearing && PiecSettings.spins.length != this.game.global.spin){
-			var tween = this.game.add.tween(this).to({alpha: 1}, 300, Phaser.Easing.Quadratic.In, true, 0);
+			var tween = this.game.add.tween(this).to({y: 0}, 300, Phaser.Easing.Quadratic.In, true, 0);
 		}
 	}
 }
