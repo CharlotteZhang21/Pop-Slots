@@ -15,7 +15,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-image: url(../assets/bg.jpg);
-    background-blend-mode: overlay;
+    // background-blend-mode: overlay;
     background-color: #333;
 }
 
@@ -204,14 +204,14 @@ a {
         z-index: 100;
     }
     #win-counter-final{
-        top: 53vh;
+        top: 50vh;
     }
     #win-counter-background{
-        top: 10vh;
-        z-index: -10;
+        top: 21vh;
+        z-index: 100;
     }
     #win-counter-background-final{
-        top: 52.5vh;
+        top: 35vh;
     }
     #spin-overlay {
         height: 35.5vw;
@@ -219,7 +219,7 @@ a {
     }
 
     #cta-container-final {
-        width: 45%;
+        width: 70%;
     }
 }
 
@@ -235,21 +235,21 @@ a {
         }
         #win-counter, #win-counter-final {
             width: 35vw;
-            top: 23%;
-            left: 10vw;
+            top: 24%;
+            left: 11vw;
             right: auto;
             height: 7.5vw;
         }
         #win-counter-background {
-            top: -25vh;
+            top: 0vh;
         }
         #win-counter-final {
-            top: 53%;
-            left: 10%;
+            top: 57%;
+            left: 0%;
             right: 0;
         }
         #win-counter-background-final {
-            top: 53%;
+            top: 33%;
             left: 0;
             right: 0;
         }
@@ -262,10 +262,10 @@ a {
         }
         #cta-container-final {
             width: 40%;
-            height: 20%;
-            left: -3vw;
+            height: 10%;
+            left: -10vw;
             right: 0;
-            bottom: 10%;
+            bottom: 0%;
         }
         #spin-overlay {
             width: 45%;
@@ -274,7 +274,7 @@ a {
         #spin-button {
             width: 64vw;
             left: -102vw;
-            top: 30vh;
+            top: 28vh;
         }
         #tooltip {
             top: 0;
@@ -345,38 +345,46 @@ a {
 
 @media all and (min-width: 768px) and (orientation: portrait) {
     .layout-2 {
-        // #logo {
-        //     width: 20vw;
-        // }
+        #logo {
+            width: 30vw;
+            left: 35vw;
+
+        }
         #logo-final {
             width: 50vw;
-            top: 28vh;
+            top: 10vh;
         }
         #spin-overlay {
             width: 73vw;
             height: 19.5vw;
         }
         #reel-layout {
-            width: 70vw;
+            width: 68vw;
             height: 45vw;
         }
         #reel-layout-background {
             width: 85vw;
         }
         #cta-container {
-            width: 43%;
+            width: 50%;
+            left: 0;
         }
         #cta-container-final {
             width: 60%;
-            bottom: 20%;
+            left: 10vw;
+            bottom: 16%;
         }
         #win-counter-background {
-            width: 75vw;
+            width: 78vw;
         }
         #win-counter {
             width: 45vw;
             height: 9vw;
-            left: 13vw;
+            left: 0vw;
+            top: 36vh;
+        }
+        #win-counter-final {
+            top: 53vh;
         }
         #coin-effect-area {
             width: 85%;
@@ -393,9 +401,9 @@ a {
         }
 
         #spin-button {
-            left: -16vw;
-            top: 15.5vh;
-            width: 96vw;
+            left: -12vw;
+            top: 14vh;
+            width: 88vw;
         }
     }
 }
@@ -403,25 +411,33 @@ a {
 @media all and (min-width: 768px) and (orientation: landscape) {
    .layout-2{ 
         #logo{
-            width: 20vw;
+            width: 35vw;
         }
         
         #win-counter {
-            top: 40vh;
+            top: 38vh;
         }
         #win-counter-background {
-            top: 5vh;
+            top: 20vh;
+        }
+
+        #win-counter-final {
+            top: 51%;
         }
 
         #reel-layout {
-            top: 72vh;
+            top: 67vh;
         }
         #reel-layout-background {
-            top: 62vh;
+            top: 59vh;
         }
 
         #spin-button {
-            top: 36vh;
+            top: 30vh;
+        }
+
+        #cta-container-final {
+            bottom: 16%;
         }
 
     }

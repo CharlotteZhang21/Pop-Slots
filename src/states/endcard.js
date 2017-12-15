@@ -79,6 +79,8 @@ import * as WinMessages from '../utils/win-messages-util.js';
      }
 
      onSpin() {
+        document.getElementById('vungle-close').className = 'visible';
+
         if (this.game.global.spin <= PiecSettings.spins.length - 1) {
             //Clear winlines
             if (this.reelLayout.winlineGraphics != null && this.reelLayout.winlineGraphics.length > 0){
@@ -93,7 +95,7 @@ import * as WinMessages from '../utils/win-messages-util.js';
             //Decrease spins left
             this.spinOverlay.spinButton.updateSpinsLeft();
             //Hide Spin button
-            this.spinOverlay.hide();
+            this.spinOverlay.hide()
             //Hide dark overlay (if it is being shown)
             this.tooltip.hide();
         }
@@ -172,7 +174,8 @@ import * as WinMessages from '../utils/win-messages-util.js';
             this.game.time.events.add(finalCtaDelay, function() {
                 this.darkOverlay.show();
                 this.logo.animate();
-                // this.winCounter.animate();
+                this.spinOverlay.fade();
+                this.winCounter.animate();
                 this.cta.animate();
             }, this);
         }

@@ -3,7 +3,7 @@ var PiecSettings = PiecSettings || {};
 PiecSettings.version = "-";
 
 PiecSettings.autospin = {
-    activateAfter: 2000,
+    activateAfter: 3000,
 }
 
 //////// DEFAULT SETTINGS FOR SLOT GAMES ////////
@@ -22,9 +22,9 @@ PiecSettings.tooltip = { // If there is a "src" value, it will always pic the im
 
 PiecSettings.reelLayout = [3,3,3]; // Heights of each of the reels in array form, where the first item is the height of the first reel, and so on.
 PiecSettings.reels = [ // Tease on first spin, win on second, big win on third
-    ["C","C","C","C","C","C","K","L","B","S","L","C","C","E","E","E","M","M","M","M","M","M","M","K","S","S","C","C","C","C","C","C","T","L","C","C","C"],
-    ["M","M","M","K","B","J","J","J","E","M","M","M","M","B","E","E","T","S","S","J","J","J","J","J","J","S","S","S","T","S","S","E","J","J","J","S","L","T"],
-    ["C","C","C","C","C","S","T","L","S","C","C","C","C","E","E","E","T","M","M","M","M","M","S","S","J","J","J","E","C","C","C","T","J","J","J","J","J","J","E","S","J"],
+    ["wild","wild","wild","wild","oneb","oneb","trib","gold","gold","doubleb","oneb","brown","brown","gold","gold","gold","brick","brick","brick","brick","brick","brick","brick","gold","doubleb","doubleb","brown","brown","brown","brown","brown","brown","trib","oneb","brown","brown","brown"],
+    ["brick","brick","brick","gold","oneb","bell","bell","bell","gold","brick","brick","brick","brick","oneb","gold","gold","trib","doubleb","doubleb","bell","bell","bell","bell","bell","bell","doubleb","doubleb","doubleb","trib","doubleb","doubleb","gold","bell","bell","bell","doubleb","oneb","trib"],
+    ["bell","bell","bell","brown","brown","doubleb","trib","oneb","doubleb","brown","brown","brown","brown","gold","gold","gold","trib","brick","brick","brick","brick","brick","doubleb","doubleb","bell","bell","bell","gold","brown","brown","brown","trib","bell","bell","bell","bell","bell","bell","gold","doubleb","bell"],
 ];
 PiecSettings.reelsAnimation = {
     delayPerReel: [0,300,600],

@@ -1,7 +1,7 @@
 import * as AnimationsUtil from '../utils/slot-animations-util.js';
 
 export function preload(game) {
-	game.load.spritesheet('coinCascade', PiecSettings.assetsDir + 'coin-cascade-01.png', 170, 384, 32);
+	game.load.spritesheet('coinCascade', PiecSettings.assetsDir + 'coin-cascade-01.png', 128, 256, 32);
 }
 
 export function play(game, layer) {

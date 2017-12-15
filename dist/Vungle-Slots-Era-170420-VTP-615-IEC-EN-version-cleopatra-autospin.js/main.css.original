@@ -179,16 +179,19 @@
   content: "t"; }
 
 .layout-1 #logo, .layout-2 #logo {
-  width: 50vw;
-  height: 10vw;
-  top: 3vh;
-  left: 0;
-  right: 0; }
+  width: 40vw;
+  height: 40vw;
+  top: 5vh;
+  left: 17vh; }
+
+.layout-1 #logo img, .layout-2 #logo img {
+  max-width: 100%;
+  z-index: 100; }
 
 .layout-1 #logo-final, .layout-2 #logo-final {
-  width: 60vw;
-  height: 10vw;
-  top: 32vh;
+  width: 40vw;
+  height: 20vw;
+  top: 8vh;
   left: 0;
   right: 0;
   z-index: 100; }
@@ -196,24 +199,26 @@
 .layout-1 #reel-layout, .layout-2 #reel-layout {
   width: 95vw;
   height: 95vw;
-  top: 16.5vh;
+  top: 43vh;
   left: 0;
   right: 0;
   z-index: -1; }
 
 .layout-1 #win-counter, .layout-1 #win-counter-final, .layout-2 #win-counter, .layout-2 #win-counter-final {
-  width: 70vw;
-  height: 15vw;
+  width: 100vw;
+  height: 20vw;
+  top: 10vh;
   left: 0;
   right: 0;
-  top: 77vh; }
+  z-index: -1; }
 
 .layout-1 #win-counter-background, .layout-1 #win-counter-background-final, .layout-2 #win-counter-background, .layout-2 #win-counter-background-final {
-  width: 80vw;
-  height: 10vw;
+  width: 100vw;
+  height: 20vw;
   left: 0;
   right: 0;
-  top: 78vh; }
+  top: 78vh;
+  z-index: -1; }
 
 .layout-1 #coin-effect-area, .layout-2 #coin-effect-area {
   width: 100%;
@@ -222,7 +227,7 @@
 
 .layout-1 #coin-cascade-area, .layout-2 #coin-cascade-area {
   width: 100%;
-  height: 10vh;
+  height: 8vh;
   top: 0;
   left: 0;
   right: 0; }
@@ -240,14 +245,6 @@
   top: 35vw;
   width: 95%;
   height: 50%; }
-
-.layout-1 #spin-button, .layout-2 #spin-button {
-  top: 30%;
-  left: 0;
-  right: 0;
-  width: 40%;
-  height: 10vw;
-  z-index: 2000; }
 
 .layout-1 #spin-overlay, .layout-2 #spin-overlay {
   width: 95vw;
@@ -270,34 +267,50 @@
   right: 0; }
 
 .layout-1 #cta-container, .layout-1 #cta-container-final, .layout-2 #cta-container, .layout-2 #cta-container-final {
-  width: 70%;
-  height: 10%;
-  left: 0;
+  width: 60%;
+  height: 8%;
+  left: 10vw;
   right: 0;
-  bottom: 2%; }
+  bottom: 3%; }
 
 .layout-1 #cta-container-final, .layout-2 #cta-container-final {
-  bottom: 23%; }
+  bottom: 13%;
+  left: 20vw;
+  z-index: 999; }
 
 .layout-2 #spin-button {
-  top: 120%; }
+  top: 18vh;
+  right: 0;
+  left: -10vw;
+  width: 100vw;
+  height: 20vw;
+  z-index: 1; }
+
+#vungle-close {
+  opacity: 0;
+  pointer-events: none; }
+
+#vungle-close.visible {
+  opacity: 1;
+  pointer-events: all; }
 
 @media all and (orientation: landscape) {
   .layout-1 #logo, .layout-2 #logo {
-    width: 35vw;
-    left: auto;
-    right: 5vw; }
+    width: 28vw;
+    height: 28vw;
+    right: -50vw;
+    top: 30vh; }
   .layout-1 #logo-final, .layout-2 #logo-final {
-    width: 50vw;
+    width: 20vw;
     top: 5vh;
     left: auto;
     right: 2.5vw; }
   .layout-1 #reel-layout, .layout-2 #reel-layout {
-    width: 50vw;
-    height: 50vw;
-    left: 2vw;
+    width: 42vw;
+    height: 28vw;
+    left: 8vw;
     right: auto;
-    top: 43vh;
+    top: 63vh;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%); }
   .layout-1 #win-counter, .layout-1 #win-counter-final, .layout-2 #win-counter, .layout-2 #win-counter-final {
@@ -305,14 +318,12 @@
     height: 10vw;
     left: auto;
     right: 5vw;
-    top: 55vh; }
+    top: 20vh; }
   .layout-1 #win-counter-background, .layout-1 #win-counter-background-final, .layout-2 #win-counter-background, .layout-2 #win-counter-background-final {
-    width: 45vw;
-    left: auto;
-    right: 0;
-    top: 45vh; }
-  .layout-1 #coin-effect-area, .layout-2 #coin-effect-area {
     width: 55vw;
+    left: -42vw; }
+  .layout-1 #coin-effect-area, .layout-2 #coin-effect-area {
+    width: 75vw;
     height: 55vw;
     top: 3vh; }
   .layout-1 #coin-cascade-area, .layout-2 #coin-cascade-area {
@@ -364,7 +375,8 @@ body {
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-image: url(../assets/bg.jpg); }
+  background-image: url(../assets/bg.jpg);
+  background-color: #333; }
 
 canvas {
   display: block;
@@ -491,7 +503,7 @@ a {
 .debug #spin-button {
   background: white;
   opacity: 0.5;
-  border: 1px solid white; }
+  border: 1px solidbu white; }
 
 .debug #cta-container, .debug #cta-container-final {
   background: pink;
@@ -501,72 +513,81 @@ a {
 /* Overwrite and adjust some of the css settings from the layouts here -----------------------*/
 .layout-1 #reel-layout, .layout-2 #reel-layout {
   width: 54.5vh;
-  max-width: 100vw;
-  max-height: 78vw;
-  height: 40vh; }
+  max-width: 74vw;
+  max-height: 54vw;
+  height: 24vh; }
 
 .layout-1 #win-counter, .layout-1 #win-counter-final, .layout-2 #win-counter, .layout-2 #win-counter-final {
-  width: 63vw;
-  height: 12.5vw;
-  left: 16vw;
-  right: 0; }
+  width: 65vw;
+  height: 9.5vw;
+  left: 0vw; }
+
+.layout-1 #win-counter-background img, .layout-2 #win-counter-background img {
+  width: 100%; }
 
 .layout-1 #win-counter, .layout-2 #win-counter {
-  top: 79.5vh; }
+  top: 36vh;
+  z-index: 100; }
 
 .layout-1 #win-counter-final, .layout-2 #win-counter-final {
-  top: 53vh; }
+  top: 50vh; }
 
 .layout-1 #win-counter-background, .layout-2 #win-counter-background {
-  top: 79vh; }
+  top: 21vh;
+  z-index: 100; }
 
 .layout-1 #win-counter-background-final, .layout-2 #win-counter-background-final {
-  top: 52.5vh; }
+  top: 35vh; }
 
 .layout-1 #spin-overlay, .layout-2 #spin-overlay {
   height: 35.5vw;
   top: calc(23.5vh + 35.5vw); }
+
+.layout-1 #cta-container-final, .layout-2 #cta-container-final {
+  width: 70%; }
 
 @media all and (orientation: landscape) {
   .layout-1 #logo-final, .layout-2 #logo-final {
     left: 0;
     right: 0; }
   .layout-1 #reel-layout, .layout-2 #reel-layout {
-    width: 52vw;
-    height: 38vw; }
+    width: 45vw;
+    height: 28vw; }
   .layout-1 #win-counter, .layout-1 #win-counter-final, .layout-2 #win-counter, .layout-2 #win-counter-final {
     width: 35vw;
-    top: 64.5%;
-    left: auto;
-    right: 1vw;
+    top: 24%;
+    left: 11vw;
+    right: auto;
     height: 7.5vw; }
   .layout-1 #win-counter-background, .layout-2 #win-counter-background {
-    top: 64%; }
+    top: 0vh; }
   .layout-1 #win-counter-final, .layout-2 #win-counter-final {
-    top: 53%;
-    left: 10%;
+    top: 57%;
+    left: 0%;
     right: 0; }
   .layout-1 #win-counter-background-final, .layout-2 #win-counter-background-final {
-    top: 53%;
+    top: 33%;
     left: 0;
     right: 0; }
   .layout-1 #cta-container, .layout-2 #cta-container {
-    width: 43%;
+    width: 35%;
     height: 20%;
     left: auto;
-    right: 1vw;
+    right: 8vw;
     bottom: 2%; }
   .layout-1 #cta-container-final, .layout-2 #cta-container-final {
-    width: 50%;
-    height: 20%;
-    left: 0;
+    width: 40%;
+    height: 10%;
+    left: -10vw;
     right: 0;
-    bottom: 10%; }
+    bottom: 0%; }
   .layout-1 #spin-overlay, .layout-2 #spin-overlay {
     width: 45%;
     top: 37%; }
   .layout-1 #spin-button, .layout-2 #spin-button {
-    width: 60%; }
+    width: 64vw;
+    left: -102vw;
+    top: 28vh; }
   .layout-1 #tooltip, .layout-2 #tooltip {
     top: 0;
     bottom: 0; } }
@@ -579,8 +600,8 @@ a {
   margin: auto;
   left: 0;
   right: 0;
-  width: 100%;
-  height: 100%; }
+  width: 78%;
+  height: 76%; }
 
 #tooltip {
   position: absolute;
@@ -597,23 +618,23 @@ a {
   background: -webkit-linear-gradient(#050d1e, #050d1e 3%, #45485b 5%, #050d1e 8%, #091e3d 20%);
   background: linear-gradient(#050d1e, #050d1e 3%, #45485b 5%, #050d1e 8%, #091e3d 20%);
   width: 100%;
-  height: 23%;
+  height: 32%;
   bottom: 0;
   border-radius: 5px 5px 0px 0px; }
 
 #reel-layout-background {
-  width: 56vh;
+  width: 70vh;
   max-width: 100vw;
   left: 0;
   right: 0;
-  top: 16vh; }
+  top: 35vh; }
 
 @media all and (orientation: landscape) {
   #reel-layout-background {
-    width: 53.5vw;
-    left: 1.5vw;
+    width: 60vw;
+    left: 0vw;
     right: auto;
-    top: 50.5%;
+    top: 54vh;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
   #cta-background {
@@ -624,35 +645,65 @@ a {
 
 @media all and (min-width: 768px) and (orientation: portrait) {
   .layout-2 #logo {
-    width: 40vw; }
+    width: 30vw;
+    left: 35vw; }
   .layout-2 #logo-final {
     width: 50vw;
-    top: 28vh; }
+    top: 10vh; }
   .layout-2 #spin-overlay {
     width: 73vw;
     height: 19.5vw; }
   .layout-2 #reel-layout {
-    width: 70vw;
-    height: 52vw; }
+    width: 68vw;
+    height: 45vw; }
   .layout-2 #reel-layout-background {
-    width: 73vw; }
+    width: 85vw; }
   .layout-2 #cta-container {
-    width: 50%; }
+    width: 50%;
+    left: 0; }
   .layout-2 #cta-container-final {
     width: 60%;
-    bottom: 20%; }
+    left: 10vw;
+    bottom: 16%; }
   .layout-2 #win-counter-background {
-    width: 60vw; }
+    width: 78vw; }
   .layout-2 #win-counter {
     width: 45vw;
     height: 9vw;
-    left: 13vw; }
+    left: 0vw;
+    top: 36vh; }
+  .layout-2 #win-counter-final {
+    top: 53vh; }
   .layout-2 #coin-effect-area {
     width: 85%; }
   .layout-2 #coin-cascade-area {
     width: 90%; }
   .layout-2 #coin-stack-area {
-    width: 70%; } }
+    width: 70%; }
+  .layout-2 #tooltip {
+    bottom: 29%; }
+  .layout-2 #spin-button {
+    left: -12vw;
+    top: 14vh;
+    width: 88vw; } }
+
+@media all and (min-width: 768px) and (orientation: landscape) {
+  .layout-2 #logo {
+    width: 35vw; }
+  .layout-2 #win-counter {
+    top: 38vh; }
+  .layout-2 #win-counter-background {
+    top: 20vh; }
+  .layout-2 #win-counter-final {
+    top: 51%; }
+  .layout-2 #reel-layout {
+    top: 67vh; }
+  .layout-2 #reel-layout-background {
+    top: 59vh; }
+  .layout-2 #spin-button {
+    top: 30vh; }
+  .layout-2 #cta-container-final {
+    bottom: 16%; } }
 
 @media all and (orientation: landscape) {
   #vungle-header.landscape-light a {

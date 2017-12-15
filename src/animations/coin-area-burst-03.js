@@ -1,7 +1,7 @@
 import * as AnimationsUtil from '../utils/slot-animations-util.js';
 
 export function preload(game) {
-	game.load.spritesheet('coinEffect', PiecSettings.assetsDir + 'coin_effect.png', 300, 300, 42);
+	game.load.spritesheet('coinEffect', PiecSettings.assetsDir + 'coin_effect.png', 128, 128, 36);
 }
 
 export function play(game, layer) {

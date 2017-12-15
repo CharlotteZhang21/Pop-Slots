@@ -179,19 +179,19 @@
   content: "t"; }
 
 .layout-1 #logo, .layout-2 #logo {
-  width: 15vw;
-  height: 15vw;
-  top: 3vh;
-  left: 3vh; }
+  width: 40vw;
+  height: 40vw;
+  top: 5vh;
+  left: 17vh; }
 
 .layout-1 #logo img, .layout-2 #logo img {
   max-width: 100%;
   z-index: 100; }
 
 .layout-1 #logo-final, .layout-2 #logo-final {
-  width: 30vw;
-  height: 10vw;
-  top: 45vh;
+  width: 40vw;
+  height: 20vw;
+  top: 8vh;
   left: 0;
   right: 0;
   z-index: 100; }
@@ -227,7 +227,7 @@
 
 .layout-1 #coin-cascade-area, .layout-2 #coin-cascade-area {
   width: 100%;
-  height: 10vh;
+  height: 8vh;
   top: 0;
   left: 0;
   right: 0; }
@@ -267,30 +267,38 @@
   right: 0; }
 
 .layout-1 #cta-container, .layout-1 #cta-container-final, .layout-2 #cta-container, .layout-2 #cta-container-final {
-  width: 47%;
+  width: 60%;
   height: 8%;
-  left: 4vw;
+  left: 10vw;
   right: 0;
   bottom: 3%; }
 
 .layout-1 #cta-container-final, .layout-2 #cta-container-final {
   bottom: 13%;
-  left: 0;
+  left: 20vw;
   z-index: 999; }
 
 .layout-2 #spin-button {
-  top: 19vh;
+  top: 18vh;
   right: 0;
   left: -10vw;
   width: 100vw;
   height: 20vw;
   z-index: 1; }
 
+#vungle-close {
+  opacity: 0;
+  pointer-events: none; }
+
+#vungle-close.visible {
+  opacity: 1;
+  pointer-events: all; }
+
 @media all and (orientation: landscape) {
   .layout-1 #logo, .layout-2 #logo {
-    width: 18vw;
-    height: 18vw;
-    right: -55vw;
+    width: 28vw;
+    height: 28vw;
+    right: -50vw;
     top: 30vh; }
   .layout-1 #logo-final, .layout-2 #logo-final {
     width: 20vw;
@@ -302,7 +310,7 @@
     height: 28vw;
     left: 8vw;
     right: auto;
-    top: 61vh;
+    top: 63vh;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%); }
   .layout-1 #win-counter, .layout-1 #win-counter-final, .layout-2 #win-counter, .layout-2 #win-counter-final {
@@ -312,10 +320,10 @@
     right: 5vw;
     top: 20vh; }
   .layout-1 #win-counter-background, .layout-1 #win-counter-background-final, .layout-2 #win-counter-background, .layout-2 #win-counter-background-final {
-    width: 60vw;
+    width: 55vw;
     left: -42vw; }
   .layout-1 #coin-effect-area, .layout-2 #coin-effect-area {
-    width: 55vw;
+    width: 75vw;
     height: 55vw;
     top: 3vh; }
   .layout-1 #coin-cascade-area, .layout-2 #coin-cascade-area {
@@ -368,7 +376,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-image: url(../assets/bg.jpg);
-  background-blend-mode: overlay;
   background-color: #333; }
 
 canvas {
@@ -523,21 +530,21 @@ a {
   z-index: 100; }
 
 .layout-1 #win-counter-final, .layout-2 #win-counter-final {
-  top: 53vh; }
+  top: 50vh; }
 
 .layout-1 #win-counter-background, .layout-2 #win-counter-background {
-  top: 10vh;
-  z-index: -10; }
+  top: 21vh;
+  z-index: 100; }
 
 .layout-1 #win-counter-background-final, .layout-2 #win-counter-background-final {
-  top: 52.5vh; }
+  top: 35vh; }
 
 .layout-1 #spin-overlay, .layout-2 #spin-overlay {
   height: 35.5vw;
   top: calc(23.5vh + 35.5vw); }
 
 .layout-1 #cta-container-final, .layout-2 #cta-container-final {
-  width: 45%; }
+  width: 70%; }
 
 @media all and (orientation: landscape) {
   .layout-1 #logo-final, .layout-2 #logo-final {
@@ -548,18 +555,18 @@ a {
     height: 28vw; }
   .layout-1 #win-counter, .layout-1 #win-counter-final, .layout-2 #win-counter, .layout-2 #win-counter-final {
     width: 35vw;
-    top: 23%;
-    left: 10vw;
+    top: 24%;
+    left: 11vw;
     right: auto;
     height: 7.5vw; }
   .layout-1 #win-counter-background, .layout-2 #win-counter-background {
-    top: -25vh; }
+    top: 0vh; }
   .layout-1 #win-counter-final, .layout-2 #win-counter-final {
-    top: 53%;
-    left: 10%;
+    top: 57%;
+    left: 0%;
     right: 0; }
   .layout-1 #win-counter-background-final, .layout-2 #win-counter-background-final {
-    top: 53%;
+    top: 33%;
     left: 0;
     right: 0; }
   .layout-1 #cta-container, .layout-2 #cta-container {
@@ -570,17 +577,17 @@ a {
     bottom: 2%; }
   .layout-1 #cta-container-final, .layout-2 #cta-container-final {
     width: 40%;
-    height: 20%;
-    left: -3vw;
+    height: 10%;
+    left: -10vw;
     right: 0;
-    bottom: 10%; }
+    bottom: 0%; }
   .layout-1 #spin-overlay, .layout-2 #spin-overlay {
     width: 45%;
     top: 37%; }
   .layout-1 #spin-button, .layout-2 #spin-button {
     width: 64vw;
     left: -102vw;
-    top: 30vh; }
+    top: 28vh; }
   .layout-1 #tooltip, .layout-2 #tooltip {
     top: 0;
     bottom: 0; } }
@@ -637,28 +644,36 @@ a {
     right: 0; } }
 
 @media all and (min-width: 768px) and (orientation: portrait) {
+  .layout-2 #logo {
+    width: 30vw;
+    left: 35vw; }
   .layout-2 #logo-final {
     width: 50vw;
-    top: 28vh; }
+    top: 10vh; }
   .layout-2 #spin-overlay {
     width: 73vw;
     height: 19.5vw; }
   .layout-2 #reel-layout {
-    width: 70vw;
+    width: 68vw;
     height: 45vw; }
   .layout-2 #reel-layout-background {
     width: 85vw; }
   .layout-2 #cta-container {
-    width: 43%; }
+    width: 50%;
+    left: 0; }
   .layout-2 #cta-container-final {
     width: 60%;
-    bottom: 20%; }
+    left: 10vw;
+    bottom: 16%; }
   .layout-2 #win-counter-background {
-    width: 75vw; }
+    width: 78vw; }
   .layout-2 #win-counter {
     width: 45vw;
     height: 9vw;
-    left: 13vw; }
+    left: 0vw;
+    top: 36vh; }
+  .layout-2 #win-counter-final {
+    top: 53vh; }
   .layout-2 #coin-effect-area {
     width: 85%; }
   .layout-2 #coin-cascade-area {
@@ -668,23 +683,27 @@ a {
   .layout-2 #tooltip {
     bottom: 29%; }
   .layout-2 #spin-button {
-    left: -16vw;
-    top: 15.5vh;
-    width: 96vw; } }
+    left: -12vw;
+    top: 14vh;
+    width: 88vw; } }
 
 @media all and (min-width: 768px) and (orientation: landscape) {
   .layout-2 #logo {
-    width: 20vw; }
+    width: 35vw; }
   .layout-2 #win-counter {
-    top: 40vh; }
+    top: 38vh; }
   .layout-2 #win-counter-background {
-    top: 5vh; }
+    top: 20vh; }
+  .layout-2 #win-counter-final {
+    top: 51%; }
   .layout-2 #reel-layout {
-    top: 72vh; }
+    top: 67vh; }
   .layout-2 #reel-layout-background {
-    top: 62vh; }
+    top: 59vh; }
   .layout-2 #spin-button {
-    top: 36vh; } }
+    top: 30vh; }
+  .layout-2 #cta-container-final {
+    bottom: 16%; } }
 
 @media all and (orientation: landscape) {
   #vungle-header.landscape-light a {

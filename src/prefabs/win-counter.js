@@ -110,7 +110,7 @@ class WinCounter extends Phaser.Group {
 
 	animate() {
 		this.animateWinCounterText();
-		// this.animateWinCounterBackground();
+		this.animateWinCounterBackground();
 	}
 
 	animateWinCounterText() {

@@ -25,7 +25,7 @@ class CtaButton extends Phaser.Group {
 
 		if(document.body.scrollWidth < document.body.scrollHeight){
 			//portrait
-			this.x = containerX*1.75;
+			this.x = containerX * 2;
 			this.y = containerY;
 		}else{
 			this.x = containerX*1.4;
@@ -41,7 +41,7 @@ class CtaButton extends Phaser.Group {
 	animate() {
 		var finalContainer = document.getElementById("cta-container-final");
 		var finalContainerWidth = finalContainer.offsetWidth * window.devicePixelRatio;
-		var finalContainerX = finalContainer.getBoundingClientRect().left * window.devicePixelRatio *1.8;
+		var finalContainerX = finalContainer.getBoundingClientRect().left * window.devicePixelRatio * 2;
 		var finalContainerY = finalContainer.getBoundingClientRect().top * window.devicePixelRatio;
 
 		var newScale = finalContainerWidth/this.initialCtaWidth;

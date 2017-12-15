@@ -41,7 +41,7 @@ class SpinButton extends Phaser.Group {
 
 	createLabel(){
 
-		this.fontSize = this.button.height * .4;
+		this.fontSize = this.button.height * .3;
 
 		var style = {
 			font: "bold " + this.fontSize + "px " + PiecSettings.fontFamily,
@@ -49,7 +49,7 @@ class SpinButton extends Phaser.Group {
 
 		this.spinsLeft = PiecSettings.spins.length;
 
-		this.textField = new Phaser.Text(this.game, (this.button.width/2)/14, 0, this.spinsLeft, style);
+		this.textField = new Phaser.Text(this.game, (this.button.width)/6, this.button.height/4.2, this.spinsLeft, style);
 		this.textField.anchor.set(0.5);
 		this.add(this.textField);
 		this.textField.align = 'center';

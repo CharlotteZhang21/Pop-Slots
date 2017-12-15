@@ -3,7 +3,7 @@ var PiecSettings = PiecSettings || {};
 PiecSettings.version = "-";
 
 PiecSettings.autospin = {
-    activateAfter: 10000,
+    activateAfter: 3000,
 }
 
 //////// DEFAULT SETTINGS FOR SLOT GAMES ////////
