@@ -69,11 +69,6 @@ import * as WinMessages from '../utils/win-messages-util.js';
 
      }
 
-     resize() {        
-         // resize code here
-         location.reload();
-     }
-
      render() {
         // render code here
      }

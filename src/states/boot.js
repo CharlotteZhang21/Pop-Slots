@@ -4,8 +4,7 @@ class Boot extends Phaser.State {
         super();
     }
 
-    preload() {
-    }
+    preload() {}
 
     init() {
 
@@ -52,25 +51,30 @@ class Boot extends Phaser.State {
         // stretch game to fit window
         window.onresize = function() {
 
-            // resize game
-            // game.scale.setGameSize(
-            //     window.innerWidth * window.devicePixelRatio,
-            //     window.innerHeight * window.devicePixelRatio
-            // );
+            // // resize game
+            // // game.scale.setGameSize(
+            // //     window.innerWidth * window.devicePixelRatio,
+            // //     window.innerHeight * window.devicePixelRatio
+            // // );
 
-            // get current state
-            var currentState = game.state.states[game.state.current];
+            // // get current state
+            // var currentState = game.state.states[game.state.current];
 
-            if (currentState.resize) {
+            // if (currentState.resize) {
 
-                // resize the state
-                currentState.resize();
-            }
+            //     // resize the state
+            //     currentState.resize();
+            // }
 
-            if (typeof piec !== 'undefined') {
-                // public API methods
-                piec.onResize();
-            }
+            // // if (typeof piec !== 'undefined') {
+            // //     // public API methods
+            // //     piec.onResize();
+            // // }
+
+            game.scale.setGameSize(document.body.clientWidth * window.devicePixelRatio, document.body.clientHeight * window.devicePixelRatio);
+            game.scale.refresh();
+            game.state.start('boot', true, false);
+
         };
     }
 

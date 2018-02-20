@@ -28,6 +28,15 @@ a {
     text-decoration: none;
 }
 
+#wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
 #bottom-container {
     position: absolute;
     transition: all 0.2s ease-in-out;
@@ -440,5 +449,86 @@ a {
             bottom: 16%;
         }
 
+    }
+}
+
+/*iPhone X portrait*/
+@media (min-device-height: 724px) and (min-aspect-ratio: 354/724) and (orientation: portrait) {
+    .layout-1 #logo, .layout-2 #logo {
+        left: 13vh;
+        width: 43vw;
+        height: 43vw;
+    }
+
+    .layout-1 #win-counter, .layout-2 #win-counter {
+        top: 37vh;
+    }
+
+    .layout-1 #win-counter-final, .layout-2 #win-counter-final {
+        top: 47vh;
+    }
+
+    .layout-2 #spin-button{
+        top: 18vh;
+    }
+
+    .layout-1 #win-counter-background, .layout-2 #win-counter-background {
+        top: 25vh;
+    }
+    #reel-layout-background {
+        top: 36vh;
+    }
+}
+
+/*iPhone X landscape*/
+@media (min-aspect-ratio: 724/354) and (orientation: landscape) {
+    .layout-1 #logo, .layout-2 #logo {
+        top: 18vh;
+        right: -43vw;
+    }
+
+    .layout-1 #logo-final, .layout-2 #logo-final {
+        width: 25vw;
+    }
+
+    .layout-1 #win-counter-background, .layout-2 #win-counter-background{
+        left: -30vw;
+        width: 45vw;
+    }
+
+    .layout-1 #win-counter-background-final, .layout-2 #win-counter-background-final {
+        width: 45vw;
+    } 
+
+    .layout-1 #win-counter, .layout-2 #win-counter {
+        top: 25%;
+        height: 6vw;
+        left: 12vw;
+    }
+
+    .layout-1 #win-counter-final, .layout-2 #win-counter-final {
+        height: 6vw;
+    }
+
+    .layout-1 #spin-button, .layout-2 #spin-button {
+        width: 50vw;
+        left: -82vw;
+    }
+
+    .layout-1 #reel-layout, .layout-2 #reel-layout {
+        width: 36vw;
+        height: 22vw;
+        left: 12.5vw;
+        top: 64vh;
+    }
+
+    #reel-layout-background {
+        width: 50vw;
+        left: 5.5vw;
+        top: 56vh;
+    }
+
+    .layout-1 #coin-cascade-area, .layout-2 #coin-cascade-area {
+        height: 5vh;
     }
 }

@@ -3,7 +3,7 @@ var PiecSettings = PiecSettings || {};
 PiecSettings.version = "-";
 
 PiecSettings.autospin = {
-    activateAfter: 3000,
+    activateAfter: 2000,
 }
 
 //////// DEFAULT SETTINGS FOR SLOT GAMES ////////
@@ -22,9 +22,9 @@ PiecSettings.tooltip = { // If there is a "src" value, it will always pic the im
 
 PiecSettings.reelLayout = [3,3,3]; // Heights of each of the reels in array form, where the first item is the height of the first reel, and so on.
 PiecSettings.reels = [ // Tease on first spin, win on second, big win on third
-    ["wild","wild","wild","wild","oneb","oneb","trib","gold","gold","doubleb","oneb","brown","brown","gold","gold","gold","brick","brick","brick","brick","brick","brick","brick","gold","doubleb","doubleb","brown","brown","brown","brown","brown","brown","trib","oneb","brown","brown","brown"],
-    ["brick","brick","brick","gold","oneb","bell","bell","bell","gold","brick","brick","brick","brick","oneb","gold","gold","trib","doubleb","doubleb","bell","bell","bell","bell","bell","bell","doubleb","doubleb","doubleb","trib","doubleb","doubleb","gold","bell","bell","bell","doubleb","oneb","trib"],
-    ["bell","bell","bell","brown","brown","doubleb","trib","oneb","doubleb","brown","brown","brown","brown","gold","gold","gold","trib","brick","brick","brick","brick","brick","doubleb","doubleb","bell","bell","bell","gold","brown","brown","brown","trib","bell","bell","bell","bell","bell","bell","gold","doubleb","bell"],
+    ["J","J","J","J","J","J","L","R","B","S","P","J","J","E","E","E","W","W","W","W","W","W","W","L","H","H","J","J","J","J","J","J","P","L","J","J","J"],
+    ["W","W","W","L","B","C","C","C","E","W","W","W","W","B","E","E","P","S","H","C","C","C","C","C","C","H","H","H","P","H","S","E","C","C","C","H","R","P"],
+    ["J","J","J","J","J","H","P","R","H","J","J","J","J","E","E","E","P","W","W","W","W","W","H","H","C","C","C","E","J","J","J","P","C","C","C","C","C","C","E","S","C"],
 ];
 PiecSettings.reelsAnimation = {
     delayPerReel: [0,300,600],
@@ -35,7 +35,7 @@ PiecSettings.winCounterInitialValue = 0;
 PiecSettings.winCounterCommaSeparation = true; //One thousand will appear as 1,000 if this is true; 1000 if this is false
 
 /////// Control symbol vertical spacing here
-PiecSettings.symbolHeight = 130;
+PiecSettings.symbolHeight = 113;
 
 /////// FINAL OVERLAY SCREEN SETTINGS ///////
 
@@ -105,10 +105,10 @@ PiecSettings.spins = [
             'coin-line-stack-01',
         ],
         pngSequence: {
-            src: 'cleopatra_anim.jpg',
+            src: 'caesar_anim.jpg',
             htmlContainer:'cleopatra-container',
             spriteWidth: 339.6,
-            spriteHeight: 248,
+            spriteHeight: 251,
             spriteNumber: 16,
             loops: 0, //write 0 if infinite loop
             delay: 3000,

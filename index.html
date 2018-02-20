@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0, user-scalable=no" />
     <title>Vungle Endcard</title>
     <!-- build:css main.css -->
     <link rel="stylesheet" href="css/main.css">
@@ -40,71 +40,73 @@
     <!--<div class="item" id="frame">
         <img src="assets/frame.png">
     </div>-->
-
-
-    <!-- PIEC Layout ////////////////////////////////////////////////// // Elements from PIEC position in the following boxes-->
-    <div class="layout-item" id="logo">
-        <!-- <img src="assets/logo.png"> -->
-    </div>
-    <div class="layout-item" id="logo-final">
-    </div>
-    <div class="layout-item" id="reel-layout">
-        <div id="cleopatra-container">
+    <div id="wrap">
+         <!-- PIEC Layout ////////////////////////////////////////////////// // Elements from PIEC position in the following boxes-->
+        <div class="layout-item" id="logo">
+            <!-- <img src="assets/logo.png"> -->
         </div>
-        <div id="tooltip">
+        <div class="layout-item" id="logo-final">
         </div>
-        <!-- Add "dissapearing" class to use the appearing/dissapearing functionality-->
-    </div>
+        <div class="layout-item" id="reel-layout">
+            <div id="cleopatra-container">
+            </div>
+            <div id="tooltip">
+            </div>
+            <!-- Add "dissapearing" class to use the appearing/dissapearing functionality-->
+        </div>
 
-    <div class="layout-item" id="spin-overlay">
-        <!-- Spin button size and positioning -->
-        <!-- Add "label" class to show spins left label inside the spin button -->
-        <div class="layout-item label" id="spin-button">
+        <div class="layout-item" id="spin-overlay">
+            <!-- Spin button size and positioning -->
+            <!-- Add "label" class to show spins left label inside the spin button -->
+            <div class="layout-item label" id="spin-button">
+            </div>
+        </div>
+
+        <!-- Win Counter Background image positioning, image should be named "win-counter-bg.png"-->
+        <div class="layout-item" id="win-counter-background">
+            <!-- <img src="assets/win-counter-background.png"> -->
+        </div>
+        <!-- Win Counter Box (text positioning) -->
+        <div class="layout-item" id="win-counter">
+        </div>
+
+        <div class="layout-item" id="win-counter-background-final">
+        </div>
+        <div class="layout-item" id="win-counter-final">
+        </div>
+
+        <!-- Area where coin/chip burst effects will happen -->
+        <div class="layout-item" id="coin-effect-area">
+        </div>
+        <!-- Stack effects and particle effects that start from the top will be inside this area -->
+        <div class="layout-item" id="coin-cascade-area">
+        </div>
+        <!-- Stack effects and particle effects that start from the bottom will be inside this area -->
+        <div class="layout-item" id="coin-stack-area">
+        </div>
+        <!-- Win Messages such as "Big Win" or "Huge Win" will be centered inside this area -->
+        <div class="layout-item" id="win-message-container">
+        </div>
+        <!-- Fonts used inside phaser -->
+        <div class="preload-font" style="font-family: Baskerville;"></div>
+        <!-- //////////////////////////////////////////////////-->
+    <!-- 
+        <div class="item" id="cta-background"></div> -->
+        <div class="item" id="reel-layout-background">
+            <img src="assets/frame.png">
+        </div>
+
+
+        <div id="game">
+        </div>
+
+        <div class="layout-item" id="cta-container">
+        </div>
+        <div class="layout-item" id="cta-container-final">
         </div>
     </div>
 
-    <!-- Win Counter Background image positioning, image should be named "win-counter-bg.png"-->
-    <div class="layout-item" id="win-counter-background">
-        <!-- <img src="assets/win-counter-background.png"> -->
-    </div>
-    <!-- Win Counter Box (text positioning) -->
-    <div class="layout-item" id="win-counter">
-    </div>
-
-    <div class="layout-item" id="win-counter-background-final">
-    </div>
-    <div class="layout-item" id="win-counter-final">
-    </div>
-
-    <!-- Area where coin/chip burst effects will happen -->
-    <div class="layout-item" id="coin-effect-area">
-    </div>
-    <!-- Stack effects and particle effects that start from the top will be inside this area -->
-    <div class="layout-item" id="coin-cascade-area">
-    </div>
-    <!-- Stack effects and particle effects that start from the bottom will be inside this area -->
-    <div class="layout-item" id="coin-stack-area">
-    </div>
-    <!-- Win Messages such as "Big Win" or "Huge Win" will be centered inside this area -->
-    <div class="layout-item" id="win-message-container">
-    </div>
-    <!-- Fonts used inside phaser -->
-    <div class="preload-font" style="font-family: Baskerville;"></div>
-    <!-- //////////////////////////////////////////////////-->
-<!-- 
-    <div class="item" id="cta-background"></div> -->
-    <div class="item" id="reel-layout-background">
-        <img src="assets/frame.png">
-    </div>
-
-
-    <div id="game">
-    </div>
-
-    <div class="layout-item" id="cta-container">
-    </div>
-    <div class="layout-item" id="cta-container-final">
-    </div>
+   
 
     <!-- <div id="bottom-container">
         <div id="client-footer">

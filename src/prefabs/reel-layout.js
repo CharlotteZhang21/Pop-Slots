@@ -60,6 +60,13 @@ class ReelLayout extends Phaser.Group {
 		// Reposition to fit
 		this.x = document.getElementById("reel-layout").getBoundingClientRect().left * window.devicePixelRatio;
 		this.y = document.getElementById("reel-layout").getBoundingClientRect().top * window.devicePixelRatio;
+
+		if(this.reels.length != 0){
+			for (var i = 0; i < this.reels.length; i++) {
+				this.reels[i].fitInContainer(this.x, this.y);
+			}
+		}
+		
 	}
 
 	drawWinlines(layer) {

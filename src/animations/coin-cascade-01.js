@@ -11,7 +11,7 @@ export function play(game, layer) {
 	var yPositions = [0, 0, 0]; //expressed as relative percentages to coin effect area
 	var delays = [1000, 1100, 1200];
 	var loops = [0,0,0];
-	var scales = [45,45,45];
+	var scales = [44,44,44];
 
 	var animations = AnimationsUtil.playAnimations("coinCascade", xPositions, yPositions, delays, loops, 0, 40, scales, false, container, game, layer);
 
